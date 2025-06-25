@@ -108,5 +108,5 @@ Despite certain challenges (e.g., occlusions, embedding failures), the fallback 
 
 **Bhakthi Shetty**  
 🎓 Final-Year B.Tech (IT), UMIT SNDT  
-📁 [Project Repository](-----------------------)
+📁 [Project Repository](https://github.com/Bhakthi-Shetty7811/player-reidentification-sports)
 
