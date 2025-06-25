@@ -5,10 +5,10 @@ This repository explores two deep learning pipelines for **player re-identificat
 
 ## 🎯 Project Overview
 
-| Option                  | Scenario                           | Goal                                                       |
-|------------------------ |------------------------------------|------------------------------------------------------------|
-| `option1-cross-camera`  | Broadcast + Tacticam               | Maintain consistent IDs across multiple views              |
-| `option2-single-camera` | Single feed (e.g., match footage)  | Maintain consistent IDs within a single continuous video   |
+| Option                  | Scenario                             | Goal                                                       |
+|------------------------ |------------------------------------- |------------------------------------------------------------|
+| `option1-cross-camera`  | Multiple feed(e.g., different angles)| Maintain consistent IDs across multiple views              |
+| `option2-single-camera` | Single feed (e.g., match footage)    | Maintain consistent IDs within a single continuous video   |
 
 Each method uses:
 - **YOLOv11** for player detection  
@@ -54,7 +54,7 @@ Tracks and assigns consistent IDs to players within a single camera feed using Y
 
 📂 [`option1-cross-camera/`](./option1-cross-camera)
 
-Re-identifies players across two separate video feeds (`broadcast.mp4` and `tacticam.mp4`) using embedding matching and the Hungarian algorithm.
+Re-identifies players across two separate video feeds using embedding matching and the Hungarian algorithm.
 
 📌 **Key Features**:
 - Tracks players independently in both views  
@@ -83,7 +83,7 @@ Tracks and assigns consistent IDs to players within a single camera feed using Y
 ## 📥 Setup & Installation
 
 ```bash
-git clone https://github.com/your-username/player-re-identification.git
+git clone https://github.com/Bhakthi-Shetty7811/player-reidentification-sports
 cd player-re-identification
 pip install -r requirements.txt
 ```
@@ -102,8 +102,8 @@ pip install -r requirements.txt
 ## 👩‍💻 Author
 
 **Bhakthi Shetty**
-Final-Year B.Tech IT, UMIT SNDT
-📫 \[Your Email or GitHub Profile]
+Final-Year B.Tech IT 2025, UMIT SNDT, GitHub: [Bhakthi-Shetty7811](https://github.com/Bhakthi-Shetty7811), Email: bhakthi.shetty7811@gmail.com
+
 
 
 
