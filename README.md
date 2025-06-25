@@ -17,19 +17,6 @@ Each method uses:
 - **Cosine Similarity + Hungarian Algorithm** (Option 1 only) for cross-view matching  
 
 
-## 🗂️ Repository Structure
-
-player-re-identification/
-│
-├── option1-cross-camera/   # Cross-camera mapping pipeline
-├── option2-single-camera/  # Single-camera consistent ID pipeline
-├── data/                   # Placeholder for input videos
-├── model/                  # Placeholder for YOLOv11 weights
-├── outputs/                # Stores generated outputs
-├── requirements.txt        # Required Python libraries
-└── README.md               # This file
-
-
 ## 🔍 Option 1: Cross-Camera Re-Identification
 
 📂 [`option1-cross-camera/`](./option1-cross-camera)
