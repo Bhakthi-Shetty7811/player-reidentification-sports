@@ -23,73 +23,60 @@ Broadcast & Tacticam Video → YOLOv11 Detection → OSNet Embedding → DeepSOR
 | `run_visualise.py` | Generates video with bounding boxes + consistent player IDs      |
 | `run_detection.py` | Triggers detection on both broadcast and tacticam videos         |
 
-
-## 📁 Directory Structure
-
-option1-cross-camera/
-├── run_detection.py
-├── match_players.py
-├── run_visualise.py
-├── src/
-│ └── detect.py
-├── model/
-│ └── yolov11.pt
-├── data/
-│ └── broadcast.mp4
-│ └── tacticam.mp4
-├── outputs/
-│ └── broadcast_data.pkl
-│ └── tacticam_data.pkl
-│ └── player_id_mapping.pkl
-│ └── broadcast_labeled.mp4
-│ └── tacticam_labeled.mp4
-├── README.md
-├── report.md
-└── requirements.txt
-
+---
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone and Prepare Environment
-
-git clone <repository-link>
+```bash
+git clone https://github.com/Bhakthi-Shetty7811/player-reidentification-sports
 cd option1-cross-camera
+```
 
 2️⃣ Install Dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
 ℹ️ If using Anaconda:
-
+```bash
 conda create -n player-reid python=3.9
 conda activate player-reid
 pip install -r requirements.txt
+```
 
 3️⃣ Torchreid Compatibility Fix (if needed)
-
+```bash
 pip uninstall torchreid
 pip install git+https://github.com/KaiyangZhou/deep-person-reid.git
+```
 
 ▶️ Run the Project
 Step-by-step Execution:
-
+```bash
 python run_detection.py       # Extract embeddings from both videos
 python match_players.py       # Match player identities across views
 python run_visualise.py       # Generate final labeled videos
 ✅ Final videos will be saved in the outputs/ folder.
+```
+---
 
-📦 Key Dependencies
+### 📦 Key Dependencies
 * ultralytics - YOLOv11
 * deep_sort_realtime - Multi-object tracking
 * torchreid - Person re-ID
 * OpenCV, PyTorch, NumPy, SciPy
 
-💡 Highlights & Innovations
+---
+
+### 💡 Highlights & Innovations
 - Extracted appearance embeddings using pretrained OSNet model.
 - Used DeepSORT with embedding fusion to maintain ID consistency across frames.
 - Performed cross-view mapping using cosine distance + Hungarian algorithm.
 - Included center-distance filtering for robust association of tracks and detections.
 
-🧠 Author
+---
+
+### 🧠 Author
 Bhakthi Shetty
 Final-Year B.Tech (IT), UMIT SNDT
