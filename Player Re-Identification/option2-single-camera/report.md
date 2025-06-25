@@ -16,6 +16,7 @@ This project focuses on the task of **re-identifying soccer players across frame
 
 All components work together to produce **frame-consistent identity tracking** of all players.
 
+---
 
 ## 🧩 2. Code Modules Overview
 
@@ -41,6 +42,7 @@ All components work together to produce **frame-consistent identity tracking** o
 - Loads YOLOv11 model.
 - Defines OpenCV helper functions for drawing labeled frames.
 
+---
 
 ## 🔁 3. Re-Identification Logic
 
@@ -51,6 +53,7 @@ All components work together to produce **frame-consistent identity tracking** o
 | Tracking   | `DeepSORT`   | Kalman + IOU + embedding match           | 🎯 ID consistency in video     |
 | Matching   | `detect.py`  | Compare tracker vs detector centers      | 🔄 Sync embedding to ID        |
 
+---
 
 ## ⚗️ 4. Techniques Tried and Outcomes
 
@@ -61,7 +64,7 @@ All components work together to produce **frame-consistent identity tracking** o
 | Custom CNN               | Replace OSNet            | ❌ Weak          | Failed under similar uniforms      |
 | Distance Only Matching   | Skip DeepSORT            | ❌ Unstable      | No smoothing; abrupt ID changes    |
 
-
+---
 
 ## 🧱 5. Challenges Encountered
 
@@ -77,6 +80,7 @@ All components work together to produce **frame-consistent identity tracking** o
 - 🏷️ **YOLO Label Conflicts**  
   → Certain YOLO models labeled all classes (ball, ref, etc.). Custom logic was required to keep only class `0`.
 
+---
 
 ## ✅ 6. Conclusion
 
@@ -90,11 +94,12 @@ Though challenges like occlusions and look-alike players affect accuracy, the us
 
 > With future upgrades such as temporal smoothing or team-based heuristics, this pipeline can serve as a foundation for intelligent sports video analysis systems.
 
+---
 
 ## 👤 Author
 
 **Bhakthi Shetty**  
 🎓 Final-Year B.Tech (IT), UMIT SNDT  
-📁 [Project Repository](-----------------------)
+📁 [Project Repository](https://github.com/Bhakthi-Shetty7811/player-reidentification-sports)
 
 
