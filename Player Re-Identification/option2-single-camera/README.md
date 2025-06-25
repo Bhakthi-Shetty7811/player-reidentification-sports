@@ -14,6 +14,7 @@ This project implements a robust player re-identification system using deep lear
 
 Video Input → YOLOv11 Detection → OSNet Embedding → DeepSORT Tracking → Output Video with IDs
 
+---
 
 ### ✔ Components:
 
@@ -24,57 +25,42 @@ Video Input → YOLOv11 Detection → OSNet Embedding → DeepSORT Tracking → 
 | `track.py`  | Initializes DeepSORT tracker                     |
 | `utils.py`  | Embedding model (Torchreid) and helper functions |
 
-
-## 📁 Directory Structure
-
-option2-single-camera/
-├── main.py
-├── src/
-|   └── detect.py
-|   └── track.py
-|   └── utils.py
-├── model/
-│   └── yolov11.pt
-├── data/
-│   └── 15sec_input_720p.mp4
-├── output.mp4
-├── README.md
-├── report.md
-└── requirements.txt
-
+---
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone and Prepare Environment
-
-git clone ________
+```
+git clone https://github.com/Bhakthi-Shetty7811/player-reidentification-sports
 cd option2-single-camera
-
+```
 
 ### 2️⃣ Install Dependencies
-
+```
 pip install -r requirements.txt
-
+```
 
 > ℹ️ If using Anaconda:
-
+```
 conda create -n player-reid python=3.9
 conda activate player-reid
 pip install -r requirements.txt
-
+```
 
 ### 3️⃣ Torchreid Compatibility Fix (if needed)
-
+```
 pip uninstall torchreid
 pip install git+https://github.com/KaiyangZhou/deep-person-reid.git
-
+```
 
 ## ▶️ Run the Project
 ### Generate Output Video with Re-ID
-
+```
 python main.py
 > ✅ Output video will be saved as `output.mp4`.
+```
 
+---
 
 ## 📦 Key Dependencies
 
@@ -83,6 +69,7 @@ python main.py
 * [`torchreid`](https://github.com/KaiyangZhou/deep-person-reid)
 * OpenCV, PyTorch, NumPy
 
+---
 
 ## 💡 Highlights & Innovations
 
@@ -90,6 +77,7 @@ python main.py
 * Used **DeepSORT** with embedding fusion to maintain ID consistency.
 * Included **center-distance filtering** and **embedding proximity** for stable matching.
 
+---
 
 ## 🧠 Author
 
