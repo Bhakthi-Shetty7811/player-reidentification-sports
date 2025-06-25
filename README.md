@@ -47,9 +47,46 @@ Tracks and assigns consistent IDs to players within a single camera feed using Y
 
 ## 📥 Setup & Installation
 
-git clone -----------------------
+
+---
+
+## 🔍 Option 1: Cross-Camera Re-Identification
+
+📂 [`option1-cross-camera/`](./option1-cross-camera)
+
+Re-identifies players across two separate video feeds (`broadcast.mp4` and `tacticam.mp4`) using embedding matching and the Hungarian algorithm.
+
+📌 **Key Features**:
+- Tracks players independently in both views  
+- Matches IDs using cosine similarity  
+- Handles unmatched players with fallback logic
+
+📄 [View Report](./option1-cross-camera/report.md)
+
+---
+
+## 🔁 Option 2: Single-Camera Re-Identification
+
+📂 [`option2-single-camera/`](./option2-single-camera)
+
+Tracks and assigns consistent IDs to players within a single camera feed using YOLOv11 + OSNet + DeepSORT.
+
+📌 **Key Features**:
+- Real-time player detection + tracking  
+- Uses appearance and motion for ID consistency  
+- Lightweight and modular design
+
+📄 [View Report](./option2-single-camera/report.md)
+
+---
+
+## 📥 Setup & Installation
+
+```bash
+git clone https://github.com/your-username/player-re-identification.git
 cd player-re-identification
 pip install -r requirements.txt
+```
 
 
 > Note: Place your input videos in `data/` and YOLOv11 model in `model/`. See each subfolder's README for details.
